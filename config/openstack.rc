@@ -1,0 +1,7 @@
+# Update this with your Datacentred credentials
+export OS_PROJECT_NAME=
+export OS_TENANT_NAME=
+export OS_USERNAME=""
+export OS_PASSWORD="supertopsecret"
+export OS_NO_CACHE=1
+export OS_AUTH_URL="https://compute.datacentred.io:5000/v2.0/"
