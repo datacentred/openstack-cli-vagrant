@@ -5,17 +5,17 @@
 A working Vagrant installation. For more details, please refer to ([http://www.vagrantup.com](http://www.vagrantup.com))
 Both Virtualbox and VMWare hypervisors on Windows, OSX and Linux should work just fine.  
 
-*Please note - We're sorry, but we can't offer support on Vagrant/Hypervisor issues, please refer to their relevant websites for support information*.
+*Please note - We're sorry, but we can't offer support on Vagrant/Hypervisor issues. Please refer to their relevant websites for support information*.
 
 ## Configuration 
 
 * **config/config.yaml**: Choose the installation method (pip and apt are supported, pip is preferred) 
-* **config/openstack.rc**: Contains the Openstack credentails. Update this with your tenant, project, username and password. 
+* **config/openstack.rc**: Contains the Openstack credentials. Update this with your tenant (aka project), username, and password. 
 
 
 ## Instructions 
 
-1) Setup Vagrant (and Virtualbox or VMware) if not already.
+1) Set up Vagrant (and Virtualbox or VMware) if not already.
 
 2) Clone or Download this repository. ie. ```git clone https://github.com/datacentred/openstack-cli-vagrant.git```
 
@@ -48,7 +48,7 @@ Bringing machine 'datacentred-openstack-cli' up with 'virtualbox' provider...
 
 6) Log into the Vagrant box ```vagrant ssh```
 
-You will now have a prompt like so;
+You will now have a prompt like so:
 ```
 vagrant@datacentred-openstack-cli:~$
 ```
@@ -68,9 +68,9 @@ vagrant@datacentred-openstack-cli:~$ openstack image list
 
 ## Maintenance
 
-### Upating Credentails
+### Updating Credentails
 
-If you've updated your openstack credentials, then simply update **config/openstack.rc** then run ```vagrant provision``` and log into your Vagrant box again. You will now have updated credentials set for the cli tools
+If you've updated your openstack credentials, then simply update **config/openstack.rc** then run ```vagrant provision``` and log into your Vagrant box again. You will now have updated credentials set for the CLI tools
 
 
 
