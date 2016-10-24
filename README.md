@@ -46,14 +46,17 @@ Bringing machine 'datacentred-openstack-cli' up with 'virtualbox' provider...
 ==> datacentred-openstack-cli: Setup complete! Please login using 'vagrant ssh' and then test with 'openstack image list'. Enjoy!
 ```
 
-6) Log into the Vagrant box ```vagrant ssh```
+6) Log into the Vagrant box ```vagrant ssh``` and then enter your password
+```
+Please enter your OpenStack Password:
+```
 
-You will now have a prompt like so:
+7) You will now have a prompt like so:
 ```
 vagrant@datacentred-openstack-cli:~$
 ```
 
-7) Check it's working! ```openstack image list```
+8) Check it's working! ```openstack image list```
 
 ```
 vagrant@datacentred-openstack-cli:~$ openstack image list
