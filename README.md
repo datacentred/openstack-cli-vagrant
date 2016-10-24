@@ -10,7 +10,7 @@ Both Virtualbox and VMWare hypervisors on Windows, OSX and Linux should work jus
 ## Configuration 
 
 * **config/config.yaml**: Choose the installation method (pip and apt are supported, pip is preferred) 
-* **config/openstack.rc**: Contains the Openstack credentials. Update this with your tenant (aka project), username, and password. 
+* **config/openstack.rc**: Contains the Openstack credentials. Update this with your tenant (aka project) and username (in the form of user@domain.tld)
 
 
 ## Instructions 

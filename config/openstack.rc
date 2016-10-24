@@ -1,10 +1,12 @@
-# Update this with your Datacentred credentials
-export OS_PROJECT_NAME=""
+# Update this section with your Datacentred credentials.
+export OS_TENANT_NAME=""
 export OS_USERNAME=""
-export OS_PASSWORD=""
+
 # Do not edit below here
+echo "Please enter your OpenStack Password: "
+read -sr OS_PASSWORD_INPUT
+export OS_PASSWORD=$OS_PASSWORD_INPUT
 export OS_REGION_NAME="sal01"
-#export OS_AUTH_STRATEGY="keystone"
 export OS_IDENTITY_API_VERSION=3
 export OS_DEFAULT_DOMAIN="default"
 export OS_NO_CACHE=1

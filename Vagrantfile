@@ -30,10 +30,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Enable default synced folder
     srv.vm.synced_folder ".", "/vagrant"
 
-    # Set the openstack env vars
-    srv.vm.provision "file", source: "config/openstack.rc", destination: "/home/vagrant/.bashrc"
-    srv.vm.provision "shell", inline: "chmod 600 /home/vagrant/.bashrc"
-
     # Quiet please
     srv.vm.provision "shell", inline: "touch /home/vagrant/.hushlogin"
 
@@ -46,6 +42,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     else
       raise Vagrant::Errors::VagrantError.new, "Unknown method type"
     end
+
+    # Set the openstack env vars
+    srv.vm.provision "file", source: "config/openstack.rc", destination: "/home/vagrant/.bashrc"
 
     # Configure vmware if being used
     srv.vm.provider :vmware_fusion do |vmw|
