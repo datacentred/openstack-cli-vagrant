@@ -73,7 +73,7 @@ vagrant@datacentred-openstack-cli:~$ openstack image list
 
 ### Updating Credentials
 
-If you've updated your openstack credentials, then simply update **config/openstack.rc** then run ```vagrant provision``` and log into your Vagrant box again. You will now have updated credentials set for the CLI tools
+If you've updated your openstack credentials, then simply update **config/openstack.rc** then run ```vagrant destroy -f && vagrant up``` and log into your Vagrant box again. You will now have updated credentials set for the CLI tools
 
 
 
