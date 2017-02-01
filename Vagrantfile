@@ -14,6 +14,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       s.inline = "sudo sed -i '/tty/!s/mesg n/tty -s \\&\\& mesg n/' /root/.profile"
   end
 
+  config.vm.network :forwarded_port, guest: 22, host: 2901 
+
   # Message to display at the end
   config.vm.post_up_message = "Setup complete! Please login using 'vagrant ssh' and then test with 'openstack image list'. Enjoy!"
 
@@ -31,7 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     srv.vm.synced_folder ".", "/vagrant"
 
     # Quiet please
-    srv.vm.provision "shell", inline: "touch /home/vagrant/.hushlogin"
+    srv.vm.provision "shell", inline: "touch /home/ubuntu/.hushlogin"
 
     # Provision depending on method needed
     case conf['method']
@@ -44,7 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
     # Set the openstack env vars
-    srv.vm.provision "file", source: "config/openstack.rc", destination: "/home/vagrant/.bashrc"
+    srv.vm.provision "file", source: "config/openstack.rc", destination: "/home/ubuntu/.bashrc"
 
     # Configure vmware if being used
     srv.vm.provider :vmware_fusion do |vmw|

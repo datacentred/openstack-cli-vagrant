@@ -1,6 +1,6 @@
 ---
 name: datacentred-openstack-cli
-box: ubuntu/trusty64
+box: ubuntu/xenial64
 ram: 512
 vcpu: 1
 method: pip
